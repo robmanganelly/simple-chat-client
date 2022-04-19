@@ -1,0 +1,22 @@
+@mixin chat-bubble{
+  width: 65%;
+}
+
+@mixin top-bubble{
+  // set props for top bubble
+}
+
+@mixin bottom-bubble{
+  // set props for bottom bubble sub:element
+}
+
+.left-chat-bubble{
+  @include chat-bubble;
+  margin-right: auto;
+  padding: 2px;
+}
+
+.right-chat-bubble{
+  @include chat-bubble;
+  margin-left: auto;
+}

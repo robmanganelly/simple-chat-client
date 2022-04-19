@@ -7,7 +7,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 //   MatBottomSheetModule,
 import {MatButtonModule} from '@angular/material/button';
 //   MatButtonToggleModule,
-//   MatCardModule,
+import {MatCardModule} from '@angular/material/card';
 //   MatCheckboxModule,
 //   MatChipsModule,
 //   MatDatepickerModule,
@@ -72,7 +72,7 @@ import {MatIconModule} from '@angular/material/icon';
     // MatBottomSheetModule,
     MatButtonModule,
     // MatButtonToggleModule,
-    // MatCardModule,
+    MatCardModule,
     // MatCheckboxModule,
     // MatChipsModule,
     // MatDatepickerModule,
