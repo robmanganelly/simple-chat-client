@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TypingBarComponent implements OnInit {
 
+  displayBar: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  postMessage(textarea: HTMLTextAreaElement): void{
+    alert(`: ${textarea.value}`)
+    console.log(textarea)
   }
 
 }

@@ -49,13 +49,13 @@ import {MatIconModule} from '@angular/material/icon';
 // import {CdkTableModule} from '@angular/cdk/table';
 // import {CdkTreeModule} from '@angular/cdk/tree';
 // import {DragDropModule} from '@angular/cdk/drag-drop';
+import {TextFieldModule} from '@angular/cdk/text-field';
 
 /**
- * NgModule that includes all Material modules.
+ * NgModule that includes all Material modules
 */
 @NgModule({
   exports: [
-    // CDK
     // A11yModule,
     // BidiModule,
     // ObserversModule,
@@ -103,6 +103,7 @@ import {MatIconModule} from '@angular/material/icon';
     // MatToolbarModule,
     // MatTooltipModule,
     // MatTreeModule,
+    TextFieldModule
   ]
 })
 export class MaterialModule {}
