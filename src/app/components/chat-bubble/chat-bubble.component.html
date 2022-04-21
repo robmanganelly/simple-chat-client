@@ -1,10 +1,12 @@
-<div class="left-chat-bubble">
+<div [ngClass]="{'left-chat-bubble': userSentTheMessage, 'right-chat-bubble': !userSentTheMessage}">
   <mat-card>
+    <!-- <mat-card-header> -->
+      <!-- <mat-card-subtitle>user wrote at 2021/09/24 10:35:46</mat-card-subtitle> -->
+    <!-- </mat-card-header> -->
     <mat-card-content>
-      <small>user at xx:xx:xx</small>
       <p>message Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate dolore maiores aliquam quibusdam at corporis, distinctio obcaecati esse perferendis hic accusamus, illo eum. Quasi, maiores numquam. Consequatur quos voluptates nulla.</p>
     </mat-card-content>
-
+  <mat-card-footer>user wrote at 2021/09/24 10:35:46</mat-card-footer>
   </mat-card>
 
 </div>

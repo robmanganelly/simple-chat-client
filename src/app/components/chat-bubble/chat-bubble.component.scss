@@ -1,5 +1,7 @@
 @mixin chat-bubble{
-  width: 65%;
+  max-width: 65%;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 3px;
 }
 
 @mixin top-bubble{

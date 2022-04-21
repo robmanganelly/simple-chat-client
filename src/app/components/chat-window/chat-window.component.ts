@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatWindowComponent implements OnInit {
 
+  //fake data
+  roomMsg = [1,1,1,1,1,1,1,1,1,1,1,1,1]
+
   constructor() { }
 
   ngOnInit(): void {
