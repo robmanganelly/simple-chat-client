@@ -1,12 +1,27 @@
-<div [ngClass]="{'left-chat-bubble': userSentTheMessage, 'right-chat-bubble': !userSentTheMessage}">
-  <mat-card>
-    <!-- <mat-card-header> -->
-      <!-- <mat-card-subtitle>user wrote at 2021/09/24 10:35:46</mat-card-subtitle> -->
-    <!-- </mat-card-header> -->
+<!-- <div [ngClass]="{'left-chat-bubble': userSentTheMessage, 'right-chat-bubble prim-color-lgt': !userSentTheMessage}">
     <mat-card-content>
-      <p>message Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate dolore maiores aliquam quibusdam at corporis, distinctio obcaecati esse perferendis hic accusamus, illo eum. Quasi, maiores numquam. Consequatur quos voluptates nulla.</p>
+      <p>
+        message Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Cupiditate dolore maiores aliquam quibusdam at corporis,
+        distinctio obcaecati esse perferendis hic accusamus, illo eum. Quasi, maiores numquam.
+        Consequatur quos voluptates nulla.
+      </p>
     </mat-card-content>
-  <mat-card-footer>user wrote at 2021/09/24 10:35:46</mat-card-footer>
+    <mat-card-footer><span>user wrote at 2021/09/24 10:35:46</span></mat-card-footer>
   </mat-card>
 
+</div> -->
+
+<div [ngClass]="{'left-chat-bubble white-bubble': userSentTheMessage, 'right-chat-bubble acc-color-lgt': !userSentTheMessage}">
+  <div>
+    <div>
+      <p class="bubble-text">
+        message Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Cupiditate dolore maiores aliquam quibusdam at corporis,
+        distinctio obcaecati esse perferendis hic accusamus, illo eum. Quasi, maiores numquam.
+        Consequatur quos voluptates nulla.
+      </p>
+    </div>
+    <div><span class="bubble-footer">user wrote at 2021/09/24 10:35:46</span></div>
+  </div>
 </div>

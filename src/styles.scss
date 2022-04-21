@@ -45,9 +45,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --color-primary: #{map-get($simple-chat-client-primary, default)};
   --color-primary-lgt: #{map-get($simple-chat-client-primary, lighter)};
   --color-primary-drk: #{map-get($simple-chat-client-primary, darker)};
-  // --color-accent: #{mat-color($simple-chat-client-accent)};
-  // --color-warn: #{mat-color($simple-chat-client-warn)};
-  // --color-success: #{mat-color($simple-chat-client-success)};
+  --color-accent: #{map-get($simple-chat-client-accent, default)};
+  --color-accent-lgt: #{map-get($simple-chat-client-accent, lighter)};
+  --color-accent-drk: #{map-get($simple-chat-client-accent, darker)};
+  // --color-warn: #{map-get($simple-chat-client-warn)};
+  // --color-success: #{map-get($simple-chat-client-success)};
 }
 
 .prim-color{
@@ -58,4 +60,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .prim-color-drk{
   background-color: var(--color-primary-drk);
+}
+
+.acc-color{
+  background-color: var(--color-accent);
+}
+.acc-color-lgt{
+  background-color: var(--color-accent-lgt);
+}
+.acc-color-drk{
+  background-color: var(--color-accent-drk);
 }
