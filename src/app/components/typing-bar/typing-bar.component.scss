@@ -10,13 +10,14 @@
 }
 
 
-// textarea {
-//   width: 93%;
+textarea {
+  overflow: auto;
+  width: 93%;
 //   max-height: 20%;
-//   border-radius: 10px;
-//   font-size: 1.3em;
-//   font-family: Arial, Helvetica, sans-serif;
-// }
+  border-radius: 10px;
+  font-size: 1.3em;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 // .typing-bar button{
 
