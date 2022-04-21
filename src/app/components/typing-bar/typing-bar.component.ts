@@ -24,13 +24,11 @@ export class TypingBarComponent implements OnInit {
     //post message here
 
     //reset textarea
-    textarea.value = ""
+    textarea.value="";
 
     //give focus back
     textarea.focus();
 
-    //debug: delete after testing
-    alert('sent')
   }
 
 }

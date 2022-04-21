@@ -35,7 +35,7 @@ import {MatIconModule} from '@angular/material/icon';
 //   MatStepperModule,
 //   MatTableModule,
 //   MatTabsModule,
-//   MatToolbarModule,
+  import {MatToolbarModule} from '@angular/material/toolbar';
 //   MatTooltipModule,
 //   MatTreeModule,
 // } from '@angular/material/';
@@ -100,7 +100,7 @@ import {TextFieldModule} from '@angular/cdk/text-field';
     // MatStepperModule,
     // MatTableModule,
     // MatTabsModule,
-    // MatToolbarModule,
+    MatToolbarModule,
     // MatTooltipModule,
     // MatTreeModule,
     TextFieldModule
