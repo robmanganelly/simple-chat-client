@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatBubbleComponent implements OnInit {
 
+  userSentTheMessage: boolean = /*this is a faked value for test purposes */ Math.random()*100 > 50;
+
   constructor() { }
 
   ngOnInit(): void {

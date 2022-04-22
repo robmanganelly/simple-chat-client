@@ -1,2 +1,18 @@
+<!--
+this is a basic layout for the chat, for a one to one chat,
+ a second stage version may include tabs for incoming chats
+an improved layout might abandon the current approach and
+ use the side-navbar component to display users and configurations
+-->
+<mat-toolbar color="primary">
+  <span>Simple Chat</span>
+  <span class="bar-spacer"></span>
+  <button
+  mat-icon-button
+  color="accent"><mat-icon
+  (click)="onclickThemeMode()">
+    {{ !isDarkMode ?'dark_mode':'light_mode'}}</mat-icon></button>
+</mat-toolbar>
+
 <app-chat-window></app-chat-window>
 <app-typing-bar></app-typing-bar>

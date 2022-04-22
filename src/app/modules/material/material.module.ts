@@ -7,7 +7,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 //   MatBottomSheetModule,
 import {MatButtonModule} from '@angular/material/button';
 //   MatButtonToggleModule,
-//   MatCardModule,
+import {MatCardModule} from '@angular/material/card';
 //   MatCheckboxModule,
 //   MatChipsModule,
 //   MatDatepickerModule,
@@ -35,7 +35,7 @@ import {MatIconModule} from '@angular/material/icon';
 //   MatStepperModule,
 //   MatTableModule,
 //   MatTabsModule,
-//   MatToolbarModule,
+  import {MatToolbarModule} from '@angular/material/toolbar';
 //   MatTooltipModule,
 //   MatTreeModule,
 // } from '@angular/material/';
@@ -49,13 +49,13 @@ import {MatIconModule} from '@angular/material/icon';
 // import {CdkTableModule} from '@angular/cdk/table';
 // import {CdkTreeModule} from '@angular/cdk/tree';
 // import {DragDropModule} from '@angular/cdk/drag-drop';
+import {TextFieldModule} from '@angular/cdk/text-field';
 
 /**
- * NgModule that includes all Material modules.
+ * NgModule that includes all Material modules
 */
 @NgModule({
   exports: [
-    // CDK
     // A11yModule,
     // BidiModule,
     // ObserversModule,
@@ -72,7 +72,7 @@ import {MatIconModule} from '@angular/material/icon';
     // MatBottomSheetModule,
     MatButtonModule,
     // MatButtonToggleModule,
-    // MatCardModule,
+    MatCardModule,
     // MatCheckboxModule,
     // MatChipsModule,
     // MatDatepickerModule,
@@ -100,9 +100,10 @@ import {MatIconModule} from '@angular/material/icon';
     // MatStepperModule,
     // MatTableModule,
     // MatTabsModule,
-    // MatToolbarModule,
+    MatToolbarModule,
     // MatTooltipModule,
     // MatTreeModule,
+    TextFieldModule
   ]
 })
 export class MaterialModule {}

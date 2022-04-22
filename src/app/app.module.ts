@@ -10,6 +10,7 @@ import { BasicDistComponent } from './components/basic-dist/basic-dist.component
 import { TypingBarComponent } from './components/typing-bar/typing-bar.component';
 import { ChatWindowComponent } from './components/chat-window/chat-window.component';
 import { ChatBubbleComponent } from './components/chat-bubble/chat-bubble.component';
+import { AuthComponent } from './components/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ChatBubbleComponent } from './components/chat-bubble/chat-bubble.compon
     BasicDistComponent,
     TypingBarComponent,
     ChatWindowComponent,
-    ChatBubbleComponent
+    ChatBubbleComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,

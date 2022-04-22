@@ -1,5 +1,30 @@
-<div>
-  <textarea name="" id="" cols="30" rows="10"></textarea>
-  <button><mat-icon>send</mat-icon> Send</button>
+<!-- (keydown)="onKey($event)" -->
+<!-- submit message with enter -->
+<!-- (keydown.enter)="postMessage(messageContainer)" -->
+<!-- (keyup.enter)="onKeydown($event)" // for event methods -->
+
+<div class="typing-bar prim-color" >
+  <textarea
+
+
+
+  matInput
+  matAutosize
+  name=""
+
+
+
+  cdkTextareaAutosize
+  #messageContainer
+  #autosize="cdkTextareaAutosize"
+  cdkAutosizeMinRows="2"
+  cdkAutosizeMaxRows="7"
+  ></textarea>
+  <button
+  mat-stroked-button
+  color="accent"
+  (click)="postMessage(messageContainer)"
+  [disabled]="messageContainer.value===''"
+  ><mat-icon>send</mat-icon> Send</button>
 
 </div>

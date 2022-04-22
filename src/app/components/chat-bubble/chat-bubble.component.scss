@@ -1,0 +1,42 @@
+@mixin chat-bubble{
+  max-width: 65%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin:4px;
+  border-radius:5px;
+  font-size: 1.2em
+}
+
+@mixin top-bubble{
+  // set props for top bubble
+}
+
+@mixin bottom-bubble{
+  // set props for bottom bubble sub:element
+}
+
+.left-chat-bubble{
+  @include chat-bubble;
+  margin-right: auto;
+  padding: 2px;
+}
+
+.right-chat-bubble{
+  @include chat-bubble;
+  margin-left: auto;
+}
+
+.bubble-footer{
+  margin-left: auto;
+  padding: 2px;
+  padding-left: 10px;
+  color: #777;
+  font-style: italic;
+}
+.bubble-text{
+  text-align: left;
+  padding: 10px;
+}
+
+.white-bubble{
+  background-color: white;
+}
