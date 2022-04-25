@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MessageObject } from 'src/app/models/message-model';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-chat-bubble',
@@ -7,11 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatBubbleComponent implements OnInit {
 
-  userSentTheMessage: boolean = /*this is a faked value for test purposes */ Math.random()*100 > 50;
+  // userSentTheMessage: boolean = /*this is a faked value for test purposes */ Math.random()*100 > 50;
 
-  constructor() { }
+  @Input() msgContent: MessageObject| null = null;
+
+  constructor(
+    private dataService: DataService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  get userSentTheMessage(): boolean{
+    return this.msgContent?.isOwn(this.dataService.loggedUser._id as string) as boolean;
+  }
+
+  get author(): string{
+    return this.msgContent?.author as string;
+  }
+  get sentAt(): number{
+    return this.msgContent?.sent as number;
+  }
+  get messageText(): string{
+    return this.msgContent?.text as string;
   }
 
 }

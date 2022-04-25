@@ -11,6 +11,7 @@ import { TypingBarComponent } from './components/typing-bar/typing-bar.component
 import { ChatWindowComponent } from './components/chat-window/chat-window.component';
 import { ChatBubbleComponent } from './components/chat-bubble/chat-bubble.component';
 import { AuthComponent } from './components/auth/auth.component';
+import { DatetimePipe } from './pipes/datetime.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AuthComponent } from './components/auth/auth.component';
     TypingBarComponent,
     ChatWindowComponent,
     ChatBubbleComponent,
-    AuthComponent
+    AuthComponent,
+    DatetimePipe
   ],
   imports: [
     BrowserModule,

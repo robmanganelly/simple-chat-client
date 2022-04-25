@@ -12,16 +12,13 @@
 
 </div> -->
 
-<div [ngClass]="{'left-chat-bubble white-bubble': userSentTheMessage, 'right-chat-bubble acc-color-lgt': !userSentTheMessage}">
+<div [ngClass]="{'left-chat-bubble white-bubble': !userSentTheMessage, 'right-chat-bubble acc-color-lgt': userSentTheMessage}">
   <div>
     <div>
       <p class="bubble-text">
-        message Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Cupiditate dolore maiores aliquam quibusdam at corporis,
-        distinctio obcaecati esse perferendis hic accusamus, illo eum. Quasi, maiores numquam.
-        Consequatur quos voluptates nulla.
+        {{messageText}}
       </p>
     </div>
-    <div><span class="bubble-footer">user wrote at 2021/09/24 10:35:46</span></div>
+    <div><span class="bubble-footer">{{author}} wrote at {{ sentAt| datetime }}</span></div>
   </div>
 </div>

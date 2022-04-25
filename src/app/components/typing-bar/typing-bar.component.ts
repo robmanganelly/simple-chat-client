@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { MessageService } from 'src/app/services/message.service';
 
 @Component({
   selector: 'app-typing-bar',
@@ -11,7 +12,9 @@ export class TypingBarComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(
+    private messageService: MessageService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +25,7 @@ export class TypingBarComponent implements OnInit {
 
   postMessage(textarea:HTMLTextAreaElement){
     //post message here
+    this.messageService.send(textarea.value);
 
     //reset textarea
     textarea.value="";

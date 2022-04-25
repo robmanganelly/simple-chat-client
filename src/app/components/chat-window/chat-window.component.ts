@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageModel, MessageObject } from 'src/app/models/message-model';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-chat-window',
@@ -8,11 +10,18 @@ import { Component, OnInit } from '@angular/core';
 export class ChatWindowComponent implements OnInit {
 
   //fake data
-  roomMsg = [1,1,1,1,1,1,1,1,1,1,1,1,1]
+  roomMsg: MessageObject[] = [];
 
-  constructor() { }
+  constructor(
+    private dataService: DataService
+  ) { }
 
   ngOnInit(): void {
+    this.dataService.messageSubject.subscribe(
+      (msg: MessageObject)=>{
+        this.roomMsg.push(msg)
+      }
+    )
   }
 
 }
