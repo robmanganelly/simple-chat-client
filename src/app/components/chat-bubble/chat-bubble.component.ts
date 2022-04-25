@@ -30,8 +30,8 @@ export class ChatBubbleComponent implements OnInit {
   get sentAt(): number{
     return this.msgContent?.sent as number;
   }
-  get messageText(): string{
-    return this.msgContent?.text as string;
+  get msgLines(): string[]{
+    return (this.msgContent?.text as string).split('\n');
   }
 
 }

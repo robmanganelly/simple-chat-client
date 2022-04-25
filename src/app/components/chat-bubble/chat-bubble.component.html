@@ -14,10 +14,8 @@
 
 <div [ngClass]="{'left-chat-bubble white-bubble': !userSentTheMessage, 'right-chat-bubble acc-color-lgt': userSentTheMessage}">
   <div>
-    <div>
-      <p class="bubble-text">
-        {{messageText}}
-      </p>
+    <div class="bubble-text">
+      <span  *ngFor="let line of msgLines" >{{line}}<br></span>
     </div>
     <div><span class="bubble-footer">{{author}} wrote at {{ sentAt| datetime }}</span></div>
   </div>
