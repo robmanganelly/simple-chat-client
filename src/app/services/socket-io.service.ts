@@ -10,9 +10,12 @@ export class SocketIOService {
 
   // a server declaration is needed on production only
 
-  private socket: Socket = environment.production ?  io() : io(environment.server) ;
+  private socket;
+  constructor() {
+    // this.socket = environment.production ?  io() : io(environment.server) ;
+    this.socket =  io(environment.serverDomain) ;
 
-  constructor() { }
+   }
 
 
 
@@ -26,6 +29,8 @@ export class SocketIOService {
 
   private _emitToRoom<T>(roomName: string, eventName: string, eventData: T){
     // this.socket.to(roomName).emit(eventName,eventData)
+    console.log(eventName, eventData);
+
     this.socket.emit(eventName,eventData)  // room not supported ??
   }
 
@@ -33,9 +38,19 @@ export class SocketIOService {
     // this.socket.join(roomName)
   }
 
+  //specific events
+
   sendSocketMessage(room: string, data: MessageModel){
     this._emitToRoom(room, 'message', data)
   }
+
+  registerConnection(){
+    this._register("connect", () => {
+      console.log(this.socket.id);
+    });
+  }
+
+
 
 
 

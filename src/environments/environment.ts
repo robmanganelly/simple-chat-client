@@ -2,9 +2,12 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const template = '127.0.0.1:3000';
+
 export const environment = {
   production: false,
-  server: '127.0.0.1:3000/api/v1'
+  server: `${template}/api/v1`,
+  serverDomain: `${template}`
 };
 
 /*

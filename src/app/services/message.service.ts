@@ -21,14 +21,14 @@ export class MessageService {
     const sent = Date.now();
     return new MessageObject(text,author as string,room,sent,id);
   }
-  private post(data: MessageModel){
-    this.socketIOService.sendSocketMessage(data.room,data);
+  private post(data: MessageObject){
+    this.socketIOService.sendSocketMessage(data.room,data.toJSON());
   }
 
   send(text: string):void{
     const msg = this.build(text)
     //send message to server
-    this.post(msg.toJSON())
+    this.post(msg);
     //reflect on ui
     this.dataService.messageSubject.next(msg);
   }
